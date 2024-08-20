@@ -1,19 +1,31 @@
-import { Route, Router, Routes } from "react-router-dom";
-import "./App.css";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { AuthProvider } from "./routes/AuthContext";
-import PublicRoute from "./routes/components/PublicRoute";
+import PublicRoute from "./routes/components/PublicRoute.jsx";
 import Login from "./auth/components/Login";
 import Register from "./auth/components/Register";
+import Home from "./pages/index";
 function App() {
   return (
     <>
       <AuthProvider>
         <Router>
           <Routes>
-            <Route path="/login" element={<PublicRoute element={Login} />} />
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/login"
+              element={
+                <PublicRoute>
+                  <Login />
+                </PublicRoute>
+              }
+            />
             <Route
               path="/register"
-              element={<PublicRoute element={Register} />}
+              element={
+                <PublicRoute>
+                  <Register />
+                </PublicRoute>
+              }
             />
             {/* Add other routes here */}
           </Routes>
