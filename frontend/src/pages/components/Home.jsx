@@ -1,13 +1,12 @@
 import Header from "../../components/Header";
+import LandingPage from "./LandingPage ";
 
 const Home = () => {
   const isAuthenticated = false;
   return (
     <>
       <Header isAuthenticated={isAuthenticated} />
-      <div>
-        <h2>Welcome to Eventify!</h2>
-      </div>
+      <LandingPage />
     </>
   );
 };
