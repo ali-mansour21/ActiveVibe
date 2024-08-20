@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 import "../pages/styles/header.css";
+import logo from "../assets/logo/ticket.svg";
 const Header = ({ isAuthenticated }) => {
   return (
     <header className="header">
       <div className="header-container">
         <div className="logo">
+          <img srcSet={logo} alt="" />
           <h1>Eventify</h1>
         </div>
         <nav className="navigation">
@@ -26,7 +28,6 @@ const Header = ({ isAuthenticated }) => {
         <div className="actions">
           {isAuthenticated ? (
             <>
-              <button className="btn">Create Event</button>
               <button className="btn">Profile</button>
             </>
           ) : (
