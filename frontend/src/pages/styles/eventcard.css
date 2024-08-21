@@ -1,0 +1,65 @@
+/* src/components/EventCard.css */
+.event-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.event-details {
+  padding: 16px;
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: bold;
+  color: #ff5a5f;
+}
+
+.event-month {
+  font-size: 14px;
+}
+
+.event-day {
+  font-size: 20px;
+}
+
+.event-info {
+  margin-top: 8px;
+}
+
+.event-title {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.event-location,
+.event-time,
+.event-price,
+.event-interested {
+  font-size: 14px;
+  color: #555;
+}
+
+.event-category {
+  background-color: #ff5a5f;
+  color: white;
+  padding: 4px 8px;
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}

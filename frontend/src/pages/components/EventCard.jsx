@@ -1,0 +1,25 @@
+import "../styles/eventcard.css";
+
+const EventCard = ({ event }) => {
+  return (
+    <div className="event-card">
+      <img src={event.imageUrl} alt={event.title} className="event-image" />
+      <div className="event-details">
+        <div className="event-date">
+          <span className="event-month">{event.month}</span>
+          <span className="event-day">{event.day}</span>
+        </div>
+        <div className="event-info">
+          <h4 className="event-title">{event.title}</h4>
+          <p className="event-location">{event.location}</p>
+          <p className="event-time">{event.time}</p>
+          <p className="event-price">{event.price}</p>
+          <p className="event-interested">{event.interested} interested</p>
+        </div>
+      </div>
+      <div className="event-category">{event.category}</div>
+    </div>
+  );
+};
+
+export default EventCard;
