@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import Categories from "./Categories";
+import EventsSection from "./EventSection";
 import LandingPage from "./LandingPage ";
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
       <Header isAuthenticated={isAuthenticated} />
       <LandingPage />
       <Categories />
+      <EventsSection />
     </>
   );
 };

@@ -2,22 +2,22 @@
 .event-card {
   background-color: #fff;
   border-radius: 8px;
+  height: 420px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .event-image {
   width: 100%;
-  height: 150px;
+  height: 250px;
   object-fit: cover;
 }
 
 .event-details {
-  padding: 16px;
+  display: flex;
+  gap: 20px;
+  padding: 10px 16px;
 }
 
 .event-date {
@@ -25,19 +25,23 @@
   flex-direction: column;
   align-items: flex-start;
   font-weight: bold;
-  color: #ff5a5f;
+  color: #ffe047;
 }
 
 .event-month {
-  font-size: 14px;
+  color: #4539b4;
+  font-weight: 900;
+  font-size: 24px;
 }
 
 .event-day {
-  font-size: 20px;
+  color: #2d2c3c;
+  font-weight: bold;
+  font-size: 26px;
 }
 
 .event-info {
-  margin-top: 8px;
+  margin-top: -10px;
 }
 
 .event-title {
@@ -50,16 +54,19 @@
 .event-price,
 .event-interested {
   font-size: 14px;
-  color: #555;
+  color: #5a5a5a;
 }
 
 .event-category {
-  background-color: #ff5a5f;
-  color: white;
+  background-color: #ffe047;
+  color: #2d2c3c;
   padding: 4px 8px;
   position: absolute;
-  bottom: 8px;
-  left: 8px;
-  border-radius: 4px;
-  font-size: 12px;
+  top: 222px;
+  left: -2px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  font-size: 18px;
 }

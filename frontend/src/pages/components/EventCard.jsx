@@ -14,7 +14,6 @@ const EventCard = ({ event }) => {
           <p className="event-location">{event.location}</p>
           <p className="event-time">{event.time}</p>
           <p className="event-price">{event.price}</p>
-          <p className="event-interested">{event.interested} interested</p>
         </div>
       </div>
       <div className="event-category">{event.category}</div>
