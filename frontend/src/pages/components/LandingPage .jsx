@@ -1,4 +1,9 @@
 import "../styles/landing.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLocationDot,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 const LandingPage = () => {
   return (
     <div className="banner">
@@ -8,13 +13,17 @@ const LandingPage = () => {
         locally and globally.
       </p>
       <div className="search-bar">
-        <input
-          type="text"
-          placeholder="Search Events, Categories, Location..."
-          className="search-input"
-        />
+        <div className="search-input-container">
+          <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
+          <input
+            type="text"
+            placeholder="Search Events, Categories, Location..."
+            className="search-input"
+          />
+        </div>
         <button className="location-button">
-          <i className="fa fa-map-marker" aria-hidden="true"></i> Mumbai
+          <FontAwesomeIcon icon={faLocationDot} className="location-icon" />{" "}
+          Mumbai
         </button>
       </div>
     </div>

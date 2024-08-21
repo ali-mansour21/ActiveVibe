@@ -37,22 +37,39 @@
   justify-content: center;
   align-items: center;
   width: 1135px;
-  margin: auto;
+  max-width: 1135px;
+  margin: 0 auto;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  border: 1px solid #2d2c3c51;
+  border-radius: 10px 0 0 10px;
+  background-color: #fff;
+}
+
+.search-icon {
+  color: #5a5a5a;
+  width: 30px;
+  height: 30px;
+  padding-left: 10px;
 }
 
 .search-input {
   padding: 15px;
-  width: 50%;
+  width: 100%;
   border: none;
-  border-radius: 10px 0 0 10px;
+  border-radius: 0;
   font-size: 18px;
   outline: none;
 }
 
 .location-button {
   padding: 15px 20px;
-  border: none;
-  border-left: 1px solid #2d2c3c;
+  border: 1px solid #2d2c3c51;
+  border-left: none;
   background-color: #fff;
   color: #333;
   border-radius: 0 10px 10px 0;
@@ -62,6 +79,6 @@
   align-items: center;
 }
 
-.location-button i {
+.location-icon {
   margin-right: 8px;
 }
