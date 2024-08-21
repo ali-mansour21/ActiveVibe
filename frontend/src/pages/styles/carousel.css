@@ -1,0 +1,68 @@
+/* src/components/DynamicCarousel.css */
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  display: flex;
+  flex-wrap: nowrap;
+  min-width: 100%;
+}
+
+.carousel-item {
+  flex: 1 0 calc(100% / 7); /* Adjust for 6 or 7 items per slide */
+  max-width: calc(100% / 7);
+  padding: 0 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.carousel-item p {
+  font-size: 20px;
+  color: #2d2c3c;
+  font-weight: 900;
+  margin: 0;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #717171;
+}

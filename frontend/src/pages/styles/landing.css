@@ -7,7 +7,7 @@
 .banner {
   background-image: url("../../assets/landing/Hero.png");
   background-size: cover;
-  height: 500px;
+  height: 300px;
   background-position: center;
   padding: 100px 20px;
   text-align: center;
@@ -51,7 +51,7 @@
 }
 
 .search-icon {
-  color: #5a5a5a;
+  color: #b8b8b8;
   width: 30px;
   height: 30px;
   padding-left: 10px;
@@ -80,5 +80,10 @@
 }
 
 .location-icon {
+  color: #b8b8b8;
   margin-right: 8px;
+}
+.list-icon {
+  color: #b8b8b8;
+  margin-left: 10px;
 }

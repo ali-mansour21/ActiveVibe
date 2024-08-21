@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.categories-container {
+  padding: 20px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.categories-container h2 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #333;
+}

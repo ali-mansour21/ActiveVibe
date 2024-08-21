@@ -1,6 +1,7 @@
 import "../styles/landing.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faCaretDown,
   faLocationDot,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
@@ -23,7 +24,7 @@ const LandingPage = () => {
         </div>
         <button className="location-button">
           <FontAwesomeIcon icon={faLocationDot} className="location-icon" />{" "}
-          Mumbai
+          Mumbai <FontAwesomeIcon icon={faCaretDown} className="list-icon" />
         </button>
       </div>
     </div>
