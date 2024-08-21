@@ -38,11 +38,14 @@
 .see-more-button {
   margin: 30px auto 0;
   display: block;
+  width: 400px;
+  height: 50px;
   padding: 12px 24px;
   border: 1px solid #333;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 18px;
   transition: background-color 0.3s;
 }
 
