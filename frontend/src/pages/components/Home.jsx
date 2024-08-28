@@ -4,6 +4,7 @@ import CuratedEventsBanner from "./CuratedEventsBanner";
 import EventsSection from "./EventSection";
 import GuideRegistrationBanner from "./GuideRegistrationBanner";
 import LandingPage from "./LandingPage ";
+import NewsletterSubscription from "./NewsletterSubscription ";
 import OnlineEventsSection from "./OnlineEventsSection";
 
 const Home = () => {
@@ -14,9 +15,10 @@ const Home = () => {
       <LandingPage />
       <Categories />
       <EventsSection />
-      <OnlineEventsSection />
       <CuratedEventsBanner />
+      <OnlineEventsSection />
       <GuideRegistrationBanner />
+      <NewsletterSubscription />
     </>
   );
 };

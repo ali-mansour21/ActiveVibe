@@ -1,0 +1,56 @@
+/* src/components/NewsletterSubscription.css */
+.newsletter-subscription {
+  background-color: #ffd966; /* Yellow background */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.newsletter-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.newsletter-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.newsletter-content p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  flex: 1;
+  max-width: 300px;
+}
+.newsletter-input:focus {
+  outline: none;
+}
+.subscribe-button {
+  background-color: #333;
+  color: #ffe047;
+  padding: 10px 20px;
+  border-radius: 0 5px 5px 0;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background-color: #000;
+}
