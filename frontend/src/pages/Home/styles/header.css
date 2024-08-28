@@ -32,15 +32,24 @@
   margin: 0 15px;
 }
 
-.navigation a {
-  text-decoration: none;
+.navigation button {
+  background: none;
+  border: none;
   color: #fff;
   padding: 26px 0px;
   font-weight: bold;
+  cursor: pointer;
+  font-size: 16px; /* Ensure the font size matches the original design */
 }
-.navigation li:hover a {
+
+.navigation button:focus {
+  outline: none;
+}
+
+.navigation li:hover button {
   border-bottom: 3px solid #ffe047;
 }
+
 .actions {
   display: flex;
   align-items: center;
@@ -64,4 +73,7 @@
 
 .actions .btn:last-child {
   margin-right: 0;
+}
+.navigation .active {
+  border-bottom: 3px solid #ffe047;
 }

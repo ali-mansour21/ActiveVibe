@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import logo from "../../assets/landing/Hero.png";
+import logo from "../../../assets/landing/Hero.png";
 import "../styles/categories.css";
 import Carousel from "./Carousel";
 const categories = [

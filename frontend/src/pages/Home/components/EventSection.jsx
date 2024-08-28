@@ -1,6 +1,6 @@
 import EventCard from "./EventCard";
 import "../styles/eventsection.css";
-import logo from "../../assets/landing/Hero.png";
+import logo from "../../../assets/landing/Hero.png";
 const events = [
   {
     title: "Lakeside Camping at Pawna",

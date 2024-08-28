@@ -1,4 +1,4 @@
-import Header from "../../components/Header";
+import Header from "../../../components/Header";
 import Categories from "./Categories";
 import CuratedEventsBanner from "./CuratedEventsBanner";
 import EventsSection from "./EventSection";

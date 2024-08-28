@@ -3,7 +3,7 @@ import { AuthProvider } from "./routes/AuthContext";
 import PublicRoute from "./routes/components/PublicRoute.jsx";
 import Login from "./auth/components/Login";
 import Register from "./auth/components/Register";
-import Home from "./pages/index";
+import Home from "./pages/Home/index.jsx";
 function App() {
   return (
     <>

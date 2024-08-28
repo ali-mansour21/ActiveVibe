@@ -1,7 +1,10 @@
 /* eslint-disable react/prop-types */
-import "../pages/styles/header.css";
+import "../pages/Home/styles/header.css";
 import logo from "../assets/logo/ticket.svg";
+import { useLocation, useNavigate } from "react-router-dom";
 const Header = ({ isAuthenticated }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
   return (
     <header className="header">
       <div className="header-container">
@@ -12,16 +15,36 @@ const Header = ({ isAuthenticated }) => {
         <nav className="navigation">
           <ul>
             <li>
-              <a href="/">Home</a>
+              <button
+                className={location.pathname === "/" ? "active" : ""}
+                onClick={() => navigate("/")}
+              >
+                Home
+              </button>
             </li>
             <li>
-              <a href="/events">Events</a>
+              <button
+                className={location.pathname === "/event" ? "active" : ""}
+                onClick={() => navigate("/events")}
+              >
+                Events
+              </button>
             </li>
             <li>
-              <a href="/about">About</a>
+              <button
+                className={location.pathname === "/about" ? "active" : ""}
+                onClick={() => navigate("/about")}
+              >
+                About
+              </button>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <button
+                className={location.pathname === "/contact" ? "active" : ""}
+                onClick={() => navigate("/contact")}
+              >
+                Contact
+              </button>
             </li>
           </ul>
         </nav>

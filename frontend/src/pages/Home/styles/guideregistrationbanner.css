@@ -1,7 +1,7 @@
 /* src/components/GuideRegistrationBanner.css */
 .guide-registration-banner {
   background-color: #2d2c3c;
-  background-image: url("../../assets/banner/guide-register.png"); /* Replace with your background image path */
+  background-image: url("../../../assets/banner/guide-register.png"); /* Replace with your background image path */
   background-size: cover;
   background-position: center;
   padding: 40px;
