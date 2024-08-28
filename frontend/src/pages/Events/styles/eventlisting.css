@@ -1,0 +1,44 @@
+/* src/components/EventListing.css */
+.event-listing {
+  display: flex;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.filters {
+  width: 300px;
+  margin-right: 50px;
+}
+
+.filters h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.filter-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.filter-group input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.event-cards-container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 20px;
+}
