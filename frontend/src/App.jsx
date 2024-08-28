@@ -4,6 +4,7 @@ import PublicRoute from "./routes/components/PublicRoute.jsx";
 import Login from "./auth/components/Login";
 import Register from "./auth/components/Register";
 import Home from "./pages/Home/index.jsx";
+import Events from "./pages/Events/index.jsx";
 function App() {
   return (
     <>
@@ -11,6 +12,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/events" element={<Events />} />
             <Route
               path="/login"
               element={

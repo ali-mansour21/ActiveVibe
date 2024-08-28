@@ -24,7 +24,7 @@ const Header = ({ isAuthenticated }) => {
             </li>
             <li>
               <button
-                className={location.pathname === "/event" ? "active" : ""}
+                className={location.pathname === "/events" ? "active" : ""}
                 onClick={() => navigate("/events")}
               >
                 Events

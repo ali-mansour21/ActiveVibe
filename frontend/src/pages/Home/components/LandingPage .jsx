@@ -1,4 +1,5 @@
 import "../styles/landing.css";
+
 const LandingPage = () => {
   return (
     <div className="banner">
