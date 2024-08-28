@@ -1,0 +1,62 @@
+.curated-events-banner {
+  background-color: #ffe047;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-content {
+  z-index: 1;
+}
+
+.curated-events-banner h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.curated-events-banner p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.get-started-button {
+  background-color: #333;
+  color: #ffe047;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-button .arrow {
+  margin-left: 8px;
+}
+
+.get-started-button:hover {
+  background-color: #000;
+}
+
+.curated-events-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../../assets/banner/recommendations.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+  z-index: 0;
+}

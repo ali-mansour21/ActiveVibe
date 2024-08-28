@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import Categories from "./Categories";
+import CuratedEventsBanner from "./CuratedEventsBanner";
 import EventsSection from "./EventSection";
 import LandingPage from "./LandingPage ";
 import OnlineEventsSection from "./OnlineEventsSection";
@@ -13,6 +14,7 @@ const Home = () => {
       <Categories />
       <EventsSection />
       <OnlineEventsSection />
+      <CuratedEventsBanner />
     </>
   );
 };
