@@ -18,8 +18,8 @@
 
 .event-filters button {
   padding: 8px 16px;
-  border: none;
-  background-color: #eee;
+  border: 1px solid #ddd;
+  background-color: transparent;
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -28,13 +28,15 @@
 .event-filters button:hover {
   background-color: #ddd;
 }
+.event-filters .active {
+  background-color: #ddd;
+}
 
 .events-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
-
 .see-more-button {
   margin: 30px auto 0;
   display: block;
