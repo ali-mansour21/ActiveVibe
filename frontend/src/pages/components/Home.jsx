@@ -2,6 +2,7 @@ import Header from "../../components/Header";
 import Categories from "./Categories";
 import EventsSection from "./EventSection";
 import LandingPage from "./LandingPage ";
+import OnlineEventsSection from "./OnlineEventsSection";
 
 const Home = () => {
   const isAuthenticated = false;
@@ -11,6 +12,7 @@ const Home = () => {
       <LandingPage />
       <Categories />
       <EventsSection />
+      <OnlineEventsSection />
     </>
   );
 };
