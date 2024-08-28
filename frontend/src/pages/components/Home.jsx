@@ -2,6 +2,7 @@ import Header from "../../components/Header";
 import Categories from "./Categories";
 import CuratedEventsBanner from "./CuratedEventsBanner";
 import EventsSection from "./EventSection";
+import Footer from "./Footer";
 import GuideRegistrationBanner from "./GuideRegistrationBanner";
 import LandingPage from "./LandingPage ";
 import NewsletterSubscription from "./NewsletterSubscription ";
@@ -19,6 +20,7 @@ const Home = () => {
       <OnlineEventsSection />
       <GuideRegistrationBanner />
       <NewsletterSubscription />
+      <Footer />
     </>
   );
 };
