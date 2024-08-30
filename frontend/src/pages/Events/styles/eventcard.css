@@ -1,22 +1,24 @@
 /* src/components/EventCard.css */
-.event-card {
+.online-event-card {
   display: flex;
   border: 1px solid #ddd;
   border-radius: 8px;
   position: relative;
-  height: 150px;
+  height: 250px;
   margin-bottom: 20px;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.event-image {
+.online-event-image {
   width: 300px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   height: auto;
   object-fit: cover;
 }
 
-.event-details {
+.online-event-details {
   padding: 15px;
   flex: 1;
   display: flex;
@@ -24,11 +26,12 @@
   justify-content: space-between;
 }
 
-.event-category {
-  background-color: #ffd966; /* Category background color */
+.online-event-category {
+  background-color: #ffd966;
   color: #fff;
   position: absolute;
-  top: 126px;
+  top: 230px;
+  left: 0;
   padding: 5px 10px;
   border-radius: 4px;
   display: inline-block;
@@ -36,19 +39,19 @@
   font-size: 12px;
 }
 
-.event-title {
+.online-event-title {
   font-size: 18px;
   margin-bottom: 10px;
   color: #333;
 }
 
-.event-date-location {
+.online-event-date-location {
   font-size: 14px;
   color: #666;
   margin-bottom: 10px;
 }
 
-.event-price {
+.online-event-price {
   font-size: 14px;
   color: #28a745; /* Green color for price */
   font-weight: bold;

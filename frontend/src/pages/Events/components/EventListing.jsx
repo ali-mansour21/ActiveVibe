@@ -77,9 +77,6 @@ const EventListing = () => {
           <label>
             <input type="checkbox" /> This Week
           </label>
-          <label>
-            <input type="checkbox" /> Pick a Date
-          </label>
         </div>
         <div className="filter-group">
           <h4>Category</h4>
