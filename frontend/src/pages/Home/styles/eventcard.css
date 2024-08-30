@@ -4,12 +4,17 @@
   border-radius: 8px;
   height: 400px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  transition: 0.2s all ease-in-out;
   position: relative;
+  cursor: pointer;
 }
-
+.event-card:hover {
+  scale: 0.95;
+}
 .event-image {
   width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   height: 250px;
   object-fit: cover;
 }

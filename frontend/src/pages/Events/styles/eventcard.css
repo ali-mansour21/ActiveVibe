@@ -4,12 +4,17 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   position: relative;
-  height: 250px;
+  height: 220px;
+  cursor: pointer;
   margin-bottom: 20px;
   background-color: white;
+  transition: 0.2s all ease-in-out;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
+.online-event-card:hover {
+  scale: 0.95;
+  z-index: 100;
+}
 .online-event-image {
   width: 300px;
   border-top-left-radius: 8px;
@@ -23,14 +28,14 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 5px;
 }
 
 .online-event-category {
   background-color: #ffd966;
   color: #fff;
   position: absolute;
-  top: 230px;
+  top: 197px;
   left: 0;
   padding: 5px 10px;
   border-radius: 4px;
@@ -50,7 +55,10 @@
   color: #666;
   margin-bottom: 10px;
 }
-
+.online-event-time {
+  font-size: 14px;
+  color: #5a5a5a;
+}
 .online-event-price {
   font-size: 14px;
   color: #28a745; /* Green color for price */

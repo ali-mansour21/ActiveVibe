@@ -1,5 +1,13 @@
 import "../styles/eventcard.css";
-const EventCard = ({ title, date, location, price, category, imageUrl }) => {
+const EventCard = ({
+  title,
+  date,
+  location,
+  price,
+  category,
+  imageUrl,
+  time,
+}) => {
   return (
     <div className="online-event-card">
       <img src={imageUrl} alt={title} className="online-event-image" />
@@ -9,6 +17,7 @@ const EventCard = ({ title, date, location, price, category, imageUrl }) => {
         <p className="online-event-date-location">
           {date} | {location}
         </p>
+        <p className="online-event-time">{time}</p>
         <p className="online-event-price">{price}</p>
       </div>
     </div>
