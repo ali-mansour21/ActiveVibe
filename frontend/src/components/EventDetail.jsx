@@ -18,19 +18,19 @@ const EventDetail = () => {
         <button className="back-button" onClick={() => navigate(-1)}>
           ← Back
         </button>
-        <div className="event-header">
+        <div className="event-detail-header">
           <img
             src={event.imageUrl}
             alt={event.title}
-            className="event-header-image"
+            className="event-detail-header-image"
           />
-          <div className="event-title-container">
-            <h1 className="event-title">{event.title}</h1>
+          <div className="event-detail-title-container">
+            <h1 className="event-detail-title">{event.title}</h1>
             <button className="buy-tickets-button">Buy Tickets</button>
           </div>
         </div>
-        <div className="event-info">
-          <div className="event-date-time">
+        <div className="event-detail-info">
+          <div className="event-detail-date-time">
             <h3>Date and Time</h3>
             <div>
               <p>{event.month}</p>
@@ -38,17 +38,17 @@ const EventDetail = () => {
             </div>
             <p>{event.time}</p>
           </div>
-          <div className="event-location">
+          <div className="event-detail-location">
             <h3>Location</h3>
             <p>{event.location}</p>
             <img
               src="/path-to-map-image/map.png"
               alt="Map"
-              className="event-map"
+              className="event-detail-map"
             />
           </div>
         </div>
-        <div className="event-description">
+        <div className="event-detail-description">
           <h3>Event Description</h3>
           <p>{event.description}</p>
         </div>

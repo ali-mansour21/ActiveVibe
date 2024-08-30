@@ -113,7 +113,7 @@ const EventListing = () => {
         {events?.map((event, index) => (
           <EventCard
             key={index}
-            {...event}
+            event={event}
             onClick={() => handleEventClick(event)}
           />
         ))}
