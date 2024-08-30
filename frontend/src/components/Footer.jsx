@@ -1,8 +1,6 @@
-import "../styles/footer.css";
+import "../pages/Home/styles/footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faXmark,
-} from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   return (
     <footer className="footer">
@@ -23,8 +21,7 @@ const Footer = () => {
             href="https://www.twitter.com"
             target="_blank"
             rel="noopener noreferrer"
-          >
-          </a>
+          ></a>
           <a
             href="https://www.instagram.com"
             target="_blank"
