@@ -5,6 +5,7 @@ import Login from "./auth/components/Login";
 import Register from "./auth/components/Register";
 import Home from "./pages/Home/index.jsx";
 import Events from "./pages/Events/index.jsx";
+import EventDetail from "./components/EventDetail.jsx";
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/event/:id" element={<EventDetail />} />
             <Route
               path="/login"
               element={

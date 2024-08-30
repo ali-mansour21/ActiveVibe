@@ -1,9 +1,12 @@
 import EventCard from "../components/EventCard";
 import "../styles/eventlisting.css";
 import logo from "../../../assets/landing/Hero.png";
+import { useNavigate } from "react-router-dom";
 const EventListing = () => {
+  const navigate = useNavigate();
   const events = [
     {
+      id: 7,
       title: "Delhi 6 - Traditional Food from Delhi Street",
       date: "Nov 23 - 29",
       location: "Chengalpattu, India",
@@ -13,6 +16,7 @@ const EventListing = () => {
       imageUrl: logo,
     },
     {
+      id: 8,
       title: "Delhi 6 - Traditional Food from Delhi Street",
       date: "Nov 23 - 29",
       location: "Chengalpattu, India",
@@ -22,6 +26,7 @@ const EventListing = () => {
       imageUrl: logo,
     },
     {
+      id: 9,
       title: "Delhi 6 - Traditional Food from Delhi Street",
       date: "Nov 23 - 29",
       location: "Chengalpattu, India",
@@ -31,6 +36,7 @@ const EventListing = () => {
       imageUrl: logo,
     },
     {
+      id: 10,
       title: "Startup Talks -Innovative event for founders & startups",
       date: "Dec 17",
       location: "New Delhi, India",
@@ -40,6 +46,7 @@ const EventListing = () => {
       imageUrl: logo,
     },
     {
+      id: 11,
       title: "Startup Talks -Innovative event for founders & startups",
       date: "Dec 17",
       location: "New Delhi, India",
@@ -49,6 +56,7 @@ const EventListing = () => {
       imageUrl: logo,
     },
     {
+      id: 12,
       title: "Startup Talks -Innovative event for founders & startups",
       date: "Dec 17",
       location: "New Delhi, India",
@@ -58,6 +66,10 @@ const EventListing = () => {
       imageUrl: logo,
     },
   ];
+
+  const handleEventClick = (event) => {
+    navigate(`/event/${event.id}`, { state: { event } });
+  };
 
   return (
     <div className="event-listing">
@@ -99,7 +111,11 @@ const EventListing = () => {
       </aside>
       <div className="event-cards-container">
         {events?.map((event, index) => (
-          <EventCard key={index} {...event} />
+          <EventCard
+            key={index}
+            {...event}
+            onClick={() => handleEventClick(event)}
+          />
         ))}
       </div>
     </div>

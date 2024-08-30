@@ -1,9 +1,9 @@
 import "../styles/eventcard.css";
 
 // eslint-disable-next-line react/prop-types
-const EventCard = ({ event }) => {
+const EventCard = ({ event, onClick }) => {
   return (
-    <div className="event-card">
+    <div className="event-card" onClick={onClick}>
       <img src={event?.imageUrl} alt={event?.title} className="event-image" />
       <div className="event-details">
         <div className="event-date">

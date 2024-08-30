@@ -2,7 +2,7 @@ import Header from "../../../components/Header";
 import Categories from "./Categories";
 import CuratedEventsBanner from "./CuratedEventsBanner";
 import EventsSection from "./EventSection";
-import Footer from "./Footer";
+import Footer from "../../../components/Footer";
 import GuideRegistrationBanner from "./GuideRegistrationBanner";
 import LandingPage from "./LandingPage ";
 import NewsletterSubscription from "./NewsletterSubscription ";

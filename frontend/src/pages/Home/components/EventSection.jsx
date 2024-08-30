@@ -1,8 +1,10 @@
 import EventCard from "./EventCard";
 import "../styles/eventsection.css";
 import logo from "../../../assets/landing/Hero.png";
+import { useNavigate } from "react-router-dom";
 const events = [
   {
+    id: 13,
     title: "Lakeside Camping at Pawna",
     month: "NOV",
     day: "25 - 26",
@@ -14,6 +16,7 @@ const events = [
     category: "Travel & Adventure",
   },
   {
+    id: 14,
     title: "Sound Of Christmas 2023",
     month: "DEC",
     day: "02",
@@ -25,6 +28,7 @@ const events = [
     category: "Cultural & Arts",
   },
   {
+    id: 15,
     title: "Meet the Royal College of Art in Mumbai 2023",
     month: "DEC",
     day: "02",
@@ -36,6 +40,7 @@ const events = [
     category: "Educational & Business",
   },
   {
+    id: 16,
     title: "Meet the Royal College of Art in Mumbai 2023",
     month: "DEC",
     day: "02",
@@ -47,6 +52,7 @@ const events = [
     category: "Educational & Business",
   },
   {
+    id: 17,
     title: "Meet the Royal College of Art in Mumbai 2023",
     month: "DEC",
     day: "02",
@@ -58,6 +64,7 @@ const events = [
     category: "Educational & Business",
   },
   {
+    id: 18,
     title: "Meet the Royal College of Art in Mumbai 2023",
     month: "DEC",
     day: "02",
@@ -71,6 +78,11 @@ const events = [
 ];
 
 const EventsSection = () => {
+  const navigate = useNavigate();
+
+  const handleEventClick = (event) => {
+    navigate(`/event/${event.id}`, { state: { event } });
+  };
   return (
     <div className="events-section">
       <h2>Popular Events in Mumbai</h2>
@@ -83,7 +95,11 @@ const EventsSection = () => {
       </div>
       <div className="events-grid">
         {events.map((event, index) => (
-          <EventCard key={index} event={event} />
+          <EventCard
+            key={index}
+            event={event}
+            onClick={() => handleEventClick(event)}
+          />
         ))}
       </div>
       <button className="see-more-button">See More</button>

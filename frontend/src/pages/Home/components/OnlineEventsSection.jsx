@@ -2,9 +2,10 @@ import EventCard from "./EventCard";
 import "../styles/onlineeventsection.css";
 import "../styles/eventcard.css";
 import logo from "../../../assets/landing/Hero.png";
-
+import { useNavigate } from "react-router-dom";
 const onlineEvents = [
   {
+    id: 1,
     title: "The Road to Jobs and Internships: Starting with LinkedIn",
     month: "JAN",
     day: "13",
@@ -16,6 +17,7 @@ const onlineEvents = [
     category: "Educational & Business",
   },
   {
+    id: 2,
     title: "Online Zumba Dance Fitness Class over Zoom",
     month: "NOV",
     day: "29",
@@ -27,6 +29,7 @@ const onlineEvents = [
     category: "Sports & Fitness",
   },
   {
+    id: 3,
     title: "Easy Book Folding: Christmas Edition",
     month: "DEC",
     day: "12",
@@ -38,6 +41,7 @@ const onlineEvents = [
     category: "Cultural & Arts",
   },
   {
+    id: 4,
     title: "Voices from the Rome Synod: An Evening with Austen Ivereigh",
     month: "DEC",
     day: "14",
@@ -49,6 +53,7 @@ const onlineEvents = [
     category: "Cultural & Arts",
   },
   {
+    id: 5,
     title: "HackerX - Zurich (Full-Stack) 11/29 (Virtual)",
     month: "NOV",
     day: "29",
@@ -60,6 +65,7 @@ const onlineEvents = [
     category: "Technology & Innovation",
   },
   {
+    id: 6,
     title: "FRIENDS OF THE METAVERSE: Season of Innovation 2023",
     month: "DEC",
     day: "07",
@@ -73,13 +79,18 @@ const onlineEvents = [
   // Add more events as needed...
 ];
 const OnlineEventsSection = () => {
+  const navigate = useNavigate();
+
+  const handleEventClick = (event) => {
+    navigate(`/event/${event.id}`, { state: { event } });
+  };
   return (
     <div className="online-events-section">
       <h2>Discover Best of Online Events</h2>
       <div className="online-events-grid">
         {onlineEvents?.map((event, index) => (
           <div key={index}>
-            <EventCard event={event} />
+            <EventCard event={event} onClick={() => handleEventClick(event)} />
           </div>
         ))}
       </div>
