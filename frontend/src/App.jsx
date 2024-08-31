@@ -6,7 +6,10 @@ import Register from "./auth/components/Register";
 import Home from "./pages/Home/index.jsx";
 import Events from "./pages/Events/index.jsx";
 import EventDetail from "./components/EventDetail.jsx";
+import { Elements } from "@stripe/react-stripe-js"; // Import Elements
+import { loadStripe } from "@stripe/stripe-js";
 function App() {
+  const stripePromise = loadStripe("YOUR_STRIPE_PUBLIC_KEY");
   return (
     <>
       <AuthProvider>
@@ -14,7 +17,14 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/events" element={<Events />} />
-            <Route path="/event/:id" element={<EventDetail />} />
+            <Route
+              path="/event/:id"
+              element={
+                <Elements stripe={stripePromise}>
+                  <EventDetail />
+                </Elements>
+              }
+            />
             <Route
               path="/login"
               element={

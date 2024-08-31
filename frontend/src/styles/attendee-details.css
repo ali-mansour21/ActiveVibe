@@ -1,0 +1,46 @@
+/* src/components/AttendeeDetails.css */
+.attendee-details {
+  padding: 20px;
+}
+
+.attendee-details h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.details-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.attendee-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.attendee-back-button,
+.attendee-proceed-button {
+  background-color: #ffe047;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.attendee-back-button {
+  background-color: #ccc;
+}

@@ -7,9 +7,12 @@ import {
   faTicket,
 } from "@fortawesome/free-solid-svg-icons";
 import Header from "./Header";
+import { useState } from "react";
+import TicketBooking from "./TicketBooking";
 const EventDetail = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const [showBooking, setShowBooking] = useState(false);
   const event = location.state?.event;
 
   if (!event) {
@@ -32,10 +35,16 @@ const EventDetail = () => {
           />
           <div className="event-detail-title-container">
             <h1 className="event-detail-title">{event.title}</h1>
-            <button className="buy-tickets-button">
+            <button
+              onClick={() => setShowBooking(true)}
+              className="buy-tickets-button"
+            >
               <FontAwesomeIcon icon={faTicket} className="ticket" />
               Buy Tickets
             </button>
+            {showBooking && (
+              <TicketBooking onClose={() => setShowBooking(false)} />
+            )}
           </div>
         </div>
         <div className="event-detail-info">

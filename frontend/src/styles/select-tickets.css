@@ -1,0 +1,67 @@
+.select-tickets {
+  padding: 20px;
+}
+
+.select-tickets h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ticket-selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.ticket-type p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.ticket-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ticket-quantity button {
+  border: none;
+  background: #ddd;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.total {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.total p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.proceed-button {
+  background-color: #ffe047;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+}
