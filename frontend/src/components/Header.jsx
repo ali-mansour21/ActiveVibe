@@ -51,7 +51,14 @@ const Header = ({ isAuthenticated }) => {
         <div className="actions">
           {isAuthenticated ? (
             <>
-              <button className="btn">Profile</button>
+              <button
+                onClick={() => {
+                  navigate("/profile");
+                }}
+                className=" btn"
+              >
+                Profile
+              </button>
             </>
           ) : (
             <>
