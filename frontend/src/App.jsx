@@ -9,7 +9,8 @@ import EventDetail from "./components/EventDetail.jsx";
 import { Elements } from "@stripe/react-stripe-js"; // Import Elements
 import { loadStripe } from "@stripe/stripe-js";
 function App() {
-  const stripePromise = loadStripe("YOUR_STRIPE_PUBLIC_KEY");
+  const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+
   return (
     <>
       <AuthProvider>
