@@ -1,5 +1,11 @@
 import "../styles/eventdetail.css";
 import { useLocation, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCalendarDays,
+  faLocationDot,
+  faTicket,
+} from "@fortawesome/free-solid-svg-icons";
 import Header from "./Header";
 const EventDetail = () => {
   const location = useLocation();
@@ -26,21 +32,28 @@ const EventDetail = () => {
           />
           <div className="event-detail-title-container">
             <h1 className="event-detail-title">{event.title}</h1>
-            <button className="buy-tickets-button">Buy Tickets</button>
+            <button className="buy-tickets-button">
+              <FontAwesomeIcon icon={faTicket} className="ticket" />
+              Buy Tickets
+            </button>
           </div>
         </div>
         <div className="event-detail-info">
           <div className="event-detail-date-time">
             <h3>Date and Time</h3>
             <div>
+              <FontAwesomeIcon icon={faCalendarDays} className="calander" />
               <p>{event.month}</p>
               <p>{event.day}</p>
+              <p>{event.time}</p>
             </div>
-            <p>{event.time}</p>
           </div>
           <div className="event-detail-location">
             <h3>Location</h3>
-            <p>{event.location}</p>
+            <div>
+              <FontAwesomeIcon icon={faLocationDot} className="location" />
+              <p>{event.location}</p>
+            </div>
             <img
               src="/path-to-map-image/map.png"
               alt="Map"
