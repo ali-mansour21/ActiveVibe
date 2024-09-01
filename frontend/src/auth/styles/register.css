@@ -1,8 +1,8 @@
 /* Register.css */
 .register-container {
   display: flex;
-  max-width: 900px;
   margin: 0 auto;
+  height: 555px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
@@ -33,32 +33,21 @@
   align-items: center;
 }
 
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #333;
-}
-
-h2 {
+.register-right h2 {
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 24px;
 }
 
-.social-buttons {
+.register-right .social-buttons {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
 
-.social-login {
+.register-right .social-login {
   flex: 1;
-  padding: 10px;
+  padding: 10px 12px;
   border: 1px solid #ddd;
   border-radius: 5px;
   display: flex;
@@ -68,17 +57,32 @@ h2 {
   transition: background-color 0.3s;
 }
 
-.social-login.google {
-  background-color: #db4437;
-  color: #fff;
+.register-right .social-login.google {
+  background-color: transparent;
+  color: #000;
+  width: 200px;
+}
+.register-right .social-login.google svg {
+  width: 20px;
+  height: 20px;
+  fill: #ff3d00;
 }
 
-.social-login.facebook {
-  background-color: #3b5998;
-  color: #fff;
+.register-right .social-login.facebook {
+  background-color: transparent;
+  color: #000;
+  width: 200px;
 }
-
-.social-icon {
+.register-right .social-login.facebook svg {
+  width: 20px;
+  height: 20px;
+  fill: #4285f4;
+}
+.register-right .social-login.google:hover,
+.register-right .social-login.facebook:hover {
+  background-color: #ddd;
+}
+.register-right .social-icon {
   margin-right: 10px;
 }
 
@@ -108,7 +112,8 @@ h2 {
   color: #555;
 }
 
-.register-form input, select {
+.register-form input,
+.register-form select {
   width: calc(100% - 40px);
   padding: 10px;
   border: 1px solid #ddd;
@@ -116,12 +121,12 @@ h2 {
   font-size: 14px;
 }
 
-.password-input {
+.register-form .password-input {
   display: flex;
   align-items: center;
 }
 
-.toggle-password {
+.register-form .toggle-password {
   background: none;
   border: none;
   cursor: pointer;
@@ -130,7 +135,9 @@ h2 {
   color: #555;
 }
 
-.next-button, .prev-button, .submit-button {
+.next-button,
+.prev-button,
+.submit-button {
   width: 100%;
   padding: 12px;
   background-color: #333;
@@ -139,19 +146,4 @@ h2 {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
-}
-
-.sign-in-text {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #333;
-}
-
-.sign-in-text a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.sign-in-text a:hover {
-  text-decoration: underline;
 }

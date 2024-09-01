@@ -1,8 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { AuthProvider } from "./routes/AuthContext";
 import PublicRoute from "./routes/components/PublicRoute.jsx";
-import Login from "./auth/components/Login";
-import Register from "./auth/components/Register";
+import Auth from "./auth/index.jsx";
 import Home from "./pages/Home/index.jsx";
 import Events from "./pages/Events/index.jsx";
 import EventDetail from "./components/EventDetail.jsx";
@@ -29,18 +28,10 @@ function App() {
             />
             <Route path="/profile" element={<ProfileScreen />} />
             <Route
-              path="/login"
+              path="/auth"
               element={
                 <PublicRoute>
-                  <Login />
-                </PublicRoute>
-              }
-            />
-            <Route
-              path="/register"
-              element={
-                <PublicRoute>
-                  <Register />
+                  <Auth />
                 </PublicRoute>
               }
             />

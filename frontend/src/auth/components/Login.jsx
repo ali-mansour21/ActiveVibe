@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaGoogle, FaFacebookF } from "react-icons/fa";
 import logo from "../../assets/logo/ticket.svg";
-import { useNavigate } from "react-router-dom";
+import "../styles/login.css";
 const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
@@ -9,7 +9,6 @@ const Login = () => {
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
-  const navigate = useNavigate();
 
   return (
     <div className="login-container">
@@ -19,7 +18,6 @@ const Login = () => {
         <p>Sign in for personalized recommendations today!</p>
       </div>
       <div className="login-right">
-        <button className="close-button">&times;</button>
         <h2>Login</h2>
         <div className="social-buttons">
           <button className="social-login google">
@@ -64,16 +62,6 @@ const Login = () => {
             Login
           </button>
         </form>
-        <p className="sign-up-text">
-          Don't have an account?{" "}
-          <button
-            onClick={() => {
-              navigate("/signup");
-            }}
-          >
-            Sign up
-          </button>
-        </p>
       </div>
     </div>
   );

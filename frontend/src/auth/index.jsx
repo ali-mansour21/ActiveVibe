@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Login from "./components/Login"; // Adjust the path according to your structure
 import Register from "./components/Register"; // Adjust the path according to your structure
 import "./styles/index.css"; // Optional: Create CSS for additional styling

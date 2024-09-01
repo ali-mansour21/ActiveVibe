@@ -1,8 +1,8 @@
 /* Login.css */
 .login-container {
   display: flex;
-  max-width: 900px;
   margin: 0 auto;
+  height: 555px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
@@ -33,30 +33,19 @@
   align-items: center;
 }
 
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #333;
-}
-
 .login-right h2 {
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 24px;
 }
 
-.social-buttons {
+.login-right .social-buttons {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
 
-.social-login {
+.login-right .social-login {
   flex: 1;
   padding: 10px;
   border: 1px solid #ddd;
@@ -68,17 +57,31 @@
   transition: background-color 0.3s;
 }
 
-.social-login.google {
-  background-color: #db4437;
-  color: #fff;
+.login-right .social-login.google {
+  background-color: transparent;
+  color: #000;
+  width: 200px;
 }
-
-.social-login.facebook {
-  background-color: #3b5998;
-  color: #fff;
+.login-right .social-login.google svg {
+  width: 20px;
+  height: 20px;
+  fill: #ff3d00;
 }
-
-.social-icon {
+.login-right .social-login.facebook {
+  background-color: transparent;
+  color: #000;
+  width: 200px;
+}
+.login-right .social-login.facebook svg {
+  width: 20px;
+  height: 20px;
+  fill: #4285f4;
+}
+.login-right .social-login.facebook:hover,
+.login-right .social-login.google:hover {
+  background-color: #ddd;
+}
+.login-right .social-icon {
   margin-right: 10px;
 }
 
@@ -97,18 +100,18 @@
   width: 100%;
 }
 
-.form-group {
+.login-form .form-group {
   margin-bottom: 15px;
 }
 
-.form-group label {
+.login-form .form-group label {
   display: block;
   margin-bottom: 5px;
   font-size: 14px;
   color: #555;
 }
 
-.form-group input {
+.login-form .form-group input {
   width: calc(100% - 40px);
   padding: 10px;
   border: 1px solid #ddd;
@@ -116,12 +119,12 @@
   font-size: 14px;
 }
 
-.password-input {
+.login-form .password-input {
   display: flex;
   align-items: center;
 }
 
-.toggle-password {
+.login-form .toggle-password {
   background: none;
   border: none;
   cursor: pointer;
@@ -130,7 +133,7 @@
   color: #555;
 }
 
-.login-button {
+.login-form .login-button {
   width: 100%;
   padding: 12px;
   background-color: #333;
@@ -139,19 +142,4 @@
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
-}
-
-.sign-up-text {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #333;
-}
-
-.sign-up-text a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.sign-up-text a:hover {
-  text-decoration: underline;
 }

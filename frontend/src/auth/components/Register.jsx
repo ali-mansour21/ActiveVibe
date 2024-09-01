@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "../styles/register.css";
 import { FaGoogle, FaFacebookF } from "react-icons/fa";
 import logo from "../../assets/logo/ticket.svg";
-import { useNavigate } from "react-router-dom";
 const Register = () => {
   const [step, setStep] = useState(1);
-  const navigate = useNavigate();
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,6 +21,9 @@ const Register = () => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
   };
 
   // Navigate to the next step
@@ -48,7 +51,6 @@ const Register = () => {
         <p>Sign up for personalized recommendations today!</p>
       </div>
       <div className="register-right">
-        <button className="close-button">&times;</button>
         <h2>{step === 1 ? "Create Account" : "Additional Information"}</h2>
         {step === 1 && (
           <div className="social-buttons">
@@ -92,15 +94,21 @@ const Register = () => {
               </div>
               <div className="form-group">
                 <label htmlFor="password">Password</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  placeholder="Enter password"
-                  value={formData.password}
-                  onChange={handleInputChange}
-                  required
-                />
+                <div className="password-input">
+                  <input
+                    type={passwordVisible ? "text" : "password"}
+                    id="password"
+                    placeholder="Enter password"
+                    required
+                  />
+                  <button
+                    type="button"
+                    className="toggle-password"
+                    onClick={togglePasswordVisibility}
+                  >
+                    {passwordVisible ? "🙈" : "👁️"}
+                  </button>
+                </div>
               </div>
               <button type="button" className="next-button" onClick={nextStep}>
                 Next
@@ -185,18 +193,6 @@ const Register = () => {
             </>
           )}
         </form>
-        {step === 1 && (
-          <p className="sign-in-text">
-            Already have an account?{" "}
-            <button
-              onClick={() => {
-                navigate("/login");
-              }}
-            >
-              Log In
-            </button>
-          </p>
-        )}
       </div>
     </div>
   );
