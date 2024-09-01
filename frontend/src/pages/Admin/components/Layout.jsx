@@ -14,7 +14,6 @@ const Layout = () => {
               className="active d-flex align-center fs-14 c-black rad-6 p-10"
               to="/admin"
             >
-              <i className="fa-solid fa-chart-simple fa-fw"></i>
               <span className="hide-mobile">Dashboard</span>
             </Link>
           </li>
@@ -23,7 +22,6 @@ const Layout = () => {
               className="d-flex align-center fs-14 c-black rad-6 p-10"
               to="/admin/profile"
             >
-              <i className="fa-solid fa-user fa-fw"></i>
               <span className="hide-mobile">Profile</span>
             </Link>
           </li>
@@ -32,7 +30,6 @@ const Layout = () => {
               className="d-flex align-center fs-14 c-black rad-6 p-10"
               to="/projects"
             >
-              <i className="fa-solid fa-diagram-project fa-fw"></i>
               <span className="hide-mobile">Project</span>
             </Link>
           </li>
@@ -41,7 +38,6 @@ const Layout = () => {
               className="d-flex align-center fs-14 c-black rad-6 p-10"
               to="/courses"
             >
-              <i className="fa-solid fa-book-open fa-fw"></i>
               <span className="hide-mobile">Courses</span>
             </Link>
           </li>
@@ -50,7 +46,6 @@ const Layout = () => {
               className="d-flex align-center fs-14 c-black rad-6 p-10"
               to="/friends"
             >
-              <i className="fa-solid fa-user-group fa-fw"></i>
               <span className="hide-mobile">Friends</span>
             </Link>
           </li>
@@ -59,7 +54,6 @@ const Layout = () => {
               className="d-flex align-center fs-14 c-black rad-6 p-10"
               to="/files"
             >
-              <i className="fa-solid fa-file fa-fw"></i>
               <span className="hide-mobile">Files</span>
             </Link>
           </li>
@@ -68,7 +62,6 @@ const Layout = () => {
               className="d-flex align-center fs-14 c-black rad-6 p-10"
               to="/plans"
             >
-              <i className="fa-solid fa-layer-group fa-fw"></i>
               <span className="hide-mobile">Plans</span>
             </Link>
           </li>
@@ -80,9 +73,6 @@ const Layout = () => {
         {/* Header */}
         <div className="head bg-white p-15 ">
           <div className="icons d-flex align-center justify-end">
-            <span className="notification p-relative">
-              <i className="fa-solid fa-bell fa-lg"></i>
-            </span>
             <img src="./Images/avatar-05.png" alt="User Avatar" />
           </div>
         </div>

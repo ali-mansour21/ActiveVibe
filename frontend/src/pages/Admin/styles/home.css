@@ -1,0 +1,42 @@
+/* src/pages/Home.css */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.block {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.block:hover {
+  transform: translateY(-5px);
+}
+
+/* Specific styles for each block if needed */
+.block-1 {
+  background-color: #f1f8e9;
+}
+
+.block-2 {
+  background-color: #e3f2fd;
+}
+
+.block-3 {
+  background-color: #fce4ec;
+}
+
+.block-4 {
+  background-color: #fff8e1;
+}
+
+.block-5 {
+  background-color: #ede7f6;
+}
