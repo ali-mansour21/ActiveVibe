@@ -10,6 +10,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import ProfileScreen from "./components/ProfileScreen.jsx";
 import AdminDashboard from "./pages/Admin/index.jsx";
+import AdminLayout from "./pages/Admin/components/Layout.jsx";
 function App() {
   const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
@@ -37,14 +38,10 @@ function App() {
                 </PublicRoute>
               }
             />
-            <Route
-              path="/admin"
-              element={
-                <ProtectedRoute requiredRole="admin">
-                  <AdminDashboard />
-                </ProtectedRoute>
-              }
-            />
+            <Route element={<AdminLayout />}>
+              <Route path="/admin" element={<AdminDashboard />} />
+              {/* Add other admin routes here */}
+            </Route>
             {/* Add other routes here */}
           </Routes>
         </Router>

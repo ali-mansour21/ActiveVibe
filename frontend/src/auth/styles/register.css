@@ -2,7 +2,6 @@
 .register-container {
   display: flex;
   margin: 0 auto;
-  height: 555px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
@@ -111,10 +110,11 @@
   font-size: 14px;
   color: #555;
 }
-
+.register-form input {
+  width: calc(100% - 20px);
+}
 .register-form input,
 .register-form select {
-  width: calc(100% - 40px);
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;

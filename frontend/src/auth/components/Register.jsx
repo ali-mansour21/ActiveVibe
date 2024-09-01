@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import "../styles/register.css";
 import { FaGoogle, FaFacebookF } from "react-icons/fa";
 import logo from "../../assets/logo/ticket.svg";
@@ -11,7 +11,7 @@ const Register = () => {
     email: "",
     password: "",
     date_of_birth: "",
-    gender: "male",
+    gender: "",
     phone_number: "",
     emergency_number: "",
     nationality: "",
@@ -134,10 +134,12 @@ const Register = () => {
                 <select
                   id="gender"
                   name="gender"
-                  value={formData.gender}
                   onChange={handleInputChange}
                   required
                 >
+                  <option selected disabled>
+                    Select Gender
+                  </option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                 </select>

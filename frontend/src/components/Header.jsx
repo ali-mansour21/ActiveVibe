@@ -62,8 +62,14 @@ const Header = ({ isAuthenticated }) => {
             </>
           ) : (
             <>
-              <button className="btn">Login</button>
-              <button className="btn">Sign Up</button>
+              <button
+                onClick={() => {
+                  navigate("/auth");
+                }}
+                className="btn"
+              >
+                Login
+              </button>
             </>
           )}
         </div>
