@@ -40,7 +40,7 @@ const GenderDistributionChart = () => {
     fetchData();
   }, []);
 
-  return <Pie data={data} />;
+  return <Pie data={data} height={300} />;
 };
 
 export default GenderDistributionChart;

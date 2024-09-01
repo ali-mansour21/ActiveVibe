@@ -1,5 +1,5 @@
 // src/components/AgeDistributionChart.jsx
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -45,7 +45,7 @@ const AgeDistributionChart = () => {
     fetchData();
   }, []);
 
-  return <Bar data={data} />;
+  return <Bar data={data} height={300} />;
 };
 
 export default AgeDistributionChart;

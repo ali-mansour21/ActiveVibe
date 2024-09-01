@@ -62,7 +62,7 @@ const NewUsersOverTimeChart = () => {
     fetchData();
   }, []);
 
-  return <Line data={data} />;
+  return <Line data={data} height={300} />;
 };
 
 export default NewUsersOverTimeChart;
