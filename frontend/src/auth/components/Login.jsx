@@ -65,7 +65,14 @@ const Login = () => {
           </button>
         </form>
         <p className="sign-up-text">
-          Don't have an account? <button>Sign up</button>
+          Don't have an account?{" "}
+          <button
+            onClick={() => {
+              navigate("/signup");
+            }}
+          >
+            Sign up
+          </button>
         </p>
       </div>
     </div>
