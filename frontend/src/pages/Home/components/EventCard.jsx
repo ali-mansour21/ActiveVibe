@@ -1,5 +1,4 @@
 import "../styles/eventcard.css";
-
 // eslint-disable-next-line react/prop-types
 const EventCard = ({ event, onClick }) => {
   return (

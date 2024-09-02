@@ -42,10 +42,12 @@ const Layout = () => {
           </li>
           <li>
             <Link
-              className="d-flex align-center fs-14 c-black rad-6 p-10"
-              to="/courses"
+              className={` ${
+                location.pathname === "/admin/events" ? "active" : ""
+              } d-flex align-center fs-14 c-black rad-6 p-10`}
+              to="/admin/events"
             >
-              <span className="hide-mobile">Courses</span>
+              <span className="hide-mobile">Events</span>
             </Link>
           </li>
           <li>
