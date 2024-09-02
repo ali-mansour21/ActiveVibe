@@ -34,9 +34,15 @@ const Index = () => {
 
   return (
     <div className="category-page">
-      <h2>Manage Categories</h2>
-      <button onClick={() => setShowModal(true)}>Add Category</button>
-
+      <div className="category-header">
+        <h2>Categories</h2>
+        <button
+          className="add-category-button"
+          onClick={() => setShowModal(true)}
+        >
+          Add Category
+        </button>
+      </div>
       <div className="categories-grid">
         {categories.map((category) => (
           <CategoryCard

@@ -34,11 +34,13 @@
   border-radius: 5px;
   width: 80%;
 }
-
+.edit-input:focus {
+  border-color: #ffe047;
+}
 .save-button,
 .edit-button,
 .delete-button {
-  padding: 5px 10px;
+  padding: 7px 15px;
   margin: 5px;
   border: none;
   border-radius: 5px;
@@ -47,12 +49,12 @@
 }
 
 .save-button {
-  background-color: #28a745;
+  background-color: #ffe047;
   color: #fff;
 }
 
 .save-button:hover {
-  background-color: #218838;
+  background-color: #e6c936;
 }
 
 .edit-button {

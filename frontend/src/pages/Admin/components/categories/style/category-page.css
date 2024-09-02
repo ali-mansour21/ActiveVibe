@@ -1,0 +1,30 @@
+.category-page {
+  padding: 20px;
+  background-color: #f4f7fc;
+}
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-category-button {
+  padding: 10px 20px;
+  background-color: #ffe047;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-category-button:hover {
+  background-color: #e6c936;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
