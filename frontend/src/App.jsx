@@ -14,6 +14,7 @@ import AdminLayout from "./pages/Admin/components/Layout.jsx";
 import AdminCategory from "./pages/Admin/components/categories/index.jsx";
 import AdminGuide from "./pages/Admin/components/guides/index.jsx";
 import AdminEvents from "./pages/Admin/components/events/index.jsx";
+import EventForm from "./pages/Admin/components/events/components/EventForm.jsx";
 function App() {
   const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
@@ -46,6 +47,7 @@ function App() {
               <Route path="/admin/categories" element={<AdminCategory />} />
               <Route path="/admin/guides" element={<AdminGuide />} />
               <Route path="/admin/events" element={<AdminEvents />} />
+              <Route path="/add-event" element={<EventForm />} />
               {/* Add other admin routes here */}
             </Route>
             {/* Add other routes here */}

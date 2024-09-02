@@ -2,7 +2,10 @@ import { useState } from "react";
 import "./styles/index.css";
 import logo from "../../../../assets/landing/Hero.png";
 import AdminEventCard from "./components/AdminEventCard";
+import EventForm from "./components/EventForm";
+import { useNavigate } from "react-router-dom";
 const Index = () => {
+  const navigate = useNavigate();
   const [events, setEvents] = useState([
     {
       id: 13,
@@ -32,7 +35,10 @@ const Index = () => {
 
   // Handle event addition (this is just a placeholder, no modal)
   const handleAddEvent = () => {
-    alert("Add Event Button Clicked! Implement your add logic here.");
+    navigate("/add-event");
+  };
+  const handleCloseForm = () => {
+    setShowEventForm(false);
   };
 
   // Handle event edit
