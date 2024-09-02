@@ -20,9 +20,9 @@ const Layout = () => {
           <li>
             <Link
               className="d-flex align-center fs-14 c-black rad-6 p-10"
-              to="/admin/profile"
+              to="/admin/categories"
             >
-              <span className="hide-mobile">Profile</span>
+              <span className="hide-mobile">Categories</span>
             </Link>
           </li>
           <li>
