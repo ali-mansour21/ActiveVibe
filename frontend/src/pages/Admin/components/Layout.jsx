@@ -1,9 +1,10 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
 import "../styles/all.min.css";
 import "../styles/framwork.css";
 import "../styles/master.css";
 import "../styles/normalize.css";
 const Layout = () => {
+  const location = useLocation();
   return (
     <div className="d-flex">
       <div className="sidebar bg-white p-20 p-relative">
@@ -11,7 +12,9 @@ const Layout = () => {
         <ul className="list-none p-0">
           <li>
             <Link
-              className="active d-flex align-center fs-14 c-black rad-6 p-10"
+              className={`${
+                location.pathname === "/admin" ? "active" : ""
+              } d-flex align-center fs-14 c-black rad-6 p-10`}
               to="/admin"
             >
               <span className="hide-mobile">Dashboard</span>
@@ -19,7 +22,9 @@ const Layout = () => {
           </li>
           <li>
             <Link
-              className="d-flex align-center fs-14 c-black rad-6 p-10"
+              className={`${
+                location.pathname === "/admin/categories" ? "active" : ""
+              } d-flex align-center fs-14 c-black rad-6 p-10`}
               to="/admin/categories"
             >
               <span className="hide-mobile">Categories</span>
@@ -27,10 +32,12 @@ const Layout = () => {
           </li>
           <li>
             <Link
-              className="d-flex align-center fs-14 c-black rad-6 p-10"
-              to="/projects"
+              className={` ${
+                location.pathname === "/admin/guides" ? "active" : ""
+              } d-flex align-center fs-14 c-black rad-6 p-10`}
+              to="/admin/guides"
             >
-              <span className="hide-mobile">Project</span>
+              <span className="hide-mobile">Guides</span>
             </Link>
           </li>
           <li>

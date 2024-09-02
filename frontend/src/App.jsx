@@ -12,6 +12,7 @@ import ProfileScreen from "./components/ProfileScreen.jsx";
 import AdminDashboard from "./pages/Admin/index.jsx";
 import AdminLayout from "./pages/Admin/components/Layout.jsx";
 import AdminCategory from "./pages/Admin/components/categories/index.jsx";
+import AdminGuide from "./pages/Admin/components/guides/index.jsx";
 function App() {
   const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
@@ -42,6 +43,7 @@ function App() {
             <Route element={<AdminLayout />}>
               <Route path="/admin" element={<AdminDashboard />} />
               <Route path="/admin/categories" element={<AdminCategory />} />
+              <Route path="/admin/guides" element={<AdminGuide />} />
               {/* Add other admin routes here */}
             </Route>
             {/* Add other routes here */}
