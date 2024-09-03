@@ -38,4 +38,24 @@ class AdminCategoryController extends Controller
             return response()->json(['status' => 'error', 'message' => 'Failed to save the category']);
         }
     }
+    public function update_category(Request $request)
+    {
+
+        $request->validate([
+            'id' => 'required|exists:categories,id',
+            'name' => 'required|unique:categories,name,' . $request->id,
+        ]);
+        $category = Category::findOrFail($request->id);
+        $category->name = $request->name;
+        $category->save();
+        return response()->json(['status' => 'success', 'message' => 'Category Updated Successfully']);
+    }
+    public function delete_category(Request $request)
+    {
+        $request->validate([
+            'id' => 'required|exists:categories,id',
+        ]);
+        Category::findOrFail($request->id)->delete();
+        return response()->json(['status' => 'success', 'message' => 'Category deleted successfully']);
+    }
 }
