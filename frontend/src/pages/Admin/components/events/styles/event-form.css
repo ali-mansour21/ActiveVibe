@@ -270,12 +270,29 @@
 }
 
 /* Next Button Styling */
-.admin-next-button {
+.admin-next-button,
+.admin-submit-button {
+  padding: 10px 20px;
+  border: none;
+  margin-top: 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  background-color: #ffe047;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-next-button:hover {
+  background-color: #ffcc00;
+}
+.admin-back-button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #ffe047;
-  color: #333;
+  background-color: #b3b0b0;
+  color: #fff;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
