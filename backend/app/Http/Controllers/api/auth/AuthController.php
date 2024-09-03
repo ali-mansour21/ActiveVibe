@@ -29,6 +29,7 @@ class AuthController extends Controller
             'password' =>  bcrypt($data['password']),
             'date_of_birth' => $data['date_of_birth'],
             'gender' => $data['gender'],
+            'role' => 'member',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
