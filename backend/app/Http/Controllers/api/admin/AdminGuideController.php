@@ -68,4 +68,37 @@ class AdminGuideController extends Controller
         ]);
         return response()->json(['status' => 'success', 'message' => 'Guide Created Successfully']);
     }
+    public function delete_guide(Request $request)
+    {
+        // Validate the incoming request to ensure a valid guide ID is provided
+        $validator = Validator::make($request->all(), [
+            'id' => 'required|exists:guides,id', // Ensures the guide ID exists in the guides table
+        ]);
+
+        // If validation fails, return an error response
+        if ($validator->fails()) {
+            return response()->json(['status' => 'error', 'errors' => $validator->errors()], 422);
+        }
+
+        // Find the guide by ID
+        $guide = Guide::find($request->id);
+
+        if ($guide) {
+            try {
+                $user = $guide->user;
+
+                $guide->delete();
+
+                if ($user) {
+                    $user->delete();
+                }
+
+                return response()->json(['status' => 'success', 'message' => 'Guide  Deleted Successfully.']);
+            } catch (\Exception $e) {
+                return response()->json(['status' => 'error', 'message' => 'Failed to delete the guide.'], 500);
+            }
+        } else {
+            return response()->json(['status' => 'error', 'message' => 'Guide Not Found'], 404);
+        }
+    }
 }
