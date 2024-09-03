@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\api\admin\AdminCategoryController;
+use App\Http\Controllers\api\admin\AdminEventController;
 use App\Http\Controllers\api\auth\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -9,7 +10,17 @@ Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 
 Route::middleware('jwt.auth')->group(function () {
-    Route::middleware('admins')->group(function (){
-        Route::post('get-categories',[AdminCategoryController::class,'get_categories']);
+    Route::middleware('admins')->group(function () {
+        Route::controller(AdminCategoryController::class)->group(function () {
+            Route::get('get-categories',  'get_categories');
+            Route::post('create-categories',  'create_category');
+            Route::post('update-categories',  'update_category');
+            Route::delete('delete-categories',  'delete_category');
+        });
+        Route::controller(AdminEventController::class)->group(function (){
+            Route::get('get-events',  'get_events');
+            Route::post('create-events',  'create_event');
+            Route::delete('delete-events',  'delete_event');
+        });
     });
 });
