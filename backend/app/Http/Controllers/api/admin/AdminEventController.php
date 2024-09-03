@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\api\admin;
 
+use App\Http\Controllers\api\files\FileController;
 use App\Http\Controllers\Controller;
 use App\Models\Event;
 use App\Models\EventGuide;
@@ -12,6 +13,11 @@ use Illuminate\Support\Facades\Validator;
 
 class AdminEventController extends Controller
 {
+    protected $file_controller;
+    public function __construct(FileController $fileController)
+    {
+        $this->file_controller = $fileController;
+    }
     public function get_events()
     {
         $created_by = auth('api')->id();
@@ -30,6 +36,8 @@ class AdminEventController extends Controller
             'location' => 'required|string|max:255',
             'status' => 'required|in:active,not_active',
             'event_type' => 'required|in:free,ticketed',
+            'event_photo' => 'required|string',
+            'event_location_type' => 'required|in:virtual,not_virtual',
             'category_id' => 'required|exists:categories,id',
             'guides' => 'required|array|min:1',
             'guides.*' => 'exists:guides,id',
@@ -42,6 +50,14 @@ class AdminEventController extends Controller
             return response()->json(['status' => 'error', 'errors' => $validator->errors()], 422);
         }
 
+        $photoPath = $this->file_controller->storeBase64Attachment($request->event_photo, 'events');
+
+        // Check if the photo was stored successfully
+        if (!is_string($photoPath)) {
+            // If photo upload failed, return the error response from FileController
+            return $photoPath; // Already formatted as a JSON response
+        }
+
         $event = new Event();
         $event->title = $request->title;
         $event->description = $request->description;
@@ -52,8 +68,10 @@ class AdminEventController extends Controller
         $event->location = $request->location;
         $event->status = $request->status;
         $event->event_type = $request->event_type;
+        $event->event_location_type = $request->event_location_type;
         $event->category_id = $request->category_id;
         $event->created_by = Auth::id();
+        $event->event_photo = $photoPath;
         $event->save();
 
         foreach ($request->guides as $guideId) {
@@ -74,7 +92,7 @@ class AdminEventController extends Controller
             }
         }
 
-        return response()->json(['status' => 'success', 'data' => $event], 201);
+        return response()->json(['status' => 'success', 'message' => 'Event Created Successfully'], 201);
     }
     public function delete_event(Request $request)
     {
