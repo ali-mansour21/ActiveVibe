@@ -17,20 +17,10 @@ const Index = () => {
   const [guides, setGuides] = useState(initialGuides);
   const [searchEmail, setSearchEmail] = useState("");
   const [searchUsername, setSearchUsername] = useState("");
-  const [currentPage, setCurrentPage] = useState(1);
-  const [guidesPerPage] = useState(5);
   const [isEditing, setIsEditing] = useState(false);
   const [currentGuide, setCurrentGuide] = useState(null);
   const [showAddGuideModal, setShowAddGuideModal] = useState(false);
 
-  // Pagination logic
-  const indexOfLastGuide = currentPage * guidesPerPage;
-  const indexOfFirstGuide = indexOfLastGuide - guidesPerPage;
-  const currentGuides = guides.slice(indexOfFirstGuide, indexOfLastGuide);
-
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-  // Handle form submissions for adding and editing guides
   const handleFormSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -68,7 +58,7 @@ const Index = () => {
   };
 
   // Filter guides based on search input
-  const filteredGuides = currentGuides.filter(
+  const filteredGuides = guides?.filter(
     (guide) =>
       guide.email.toLowerCase().includes(searchEmail.toLowerCase()) &&
       guide.dashboard_username
@@ -139,18 +129,6 @@ const Index = () => {
           ))}
         </tbody>
       </table>
-
-      {/* Pagination */}
-      <div className="pagination">
-        {Array.from(
-          { length: Math.ceil(guides.length / guidesPerPage) },
-          (_, index) => (
-            <button key={index} onClick={() => paginate(index + 1)}>
-              {index + 1}
-            </button>
-          )
-        )}
-      </div>
 
       {/* Add/Edit Guide Modal */}
       {showAddGuideModal && (

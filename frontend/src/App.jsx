@@ -47,7 +47,7 @@ function App() {
               <Route path="/admin/categories" element={<AdminCategory />} />
               <Route path="/admin/guides" element={<AdminGuide />} />
               <Route path="/admin/events" element={<AdminEvents />} />
-              <Route path="/add-event" element={<EventForm />} />
+              <Route path="/admin/add-event" element={<EventForm />} />
               {/* Add other admin routes here */}
             </Route>
             {/* Add other routes here */}

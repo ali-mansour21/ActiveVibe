@@ -1,7 +1,7 @@
 .admin-event-card {
   background-color: #fff;
   border-radius: 8px;
-  height: 450px;
+  height: 500px;
   transition: 0.2s all ease-in-out;
   position: relative;
   cursor: pointer;
@@ -50,7 +50,8 @@
 }
 
 .admin-event-title {
-  font-size: 18px;
+  font-size: 30px;
+  font-weight: bold;
   margin: 8px 0;
 }
 
@@ -67,7 +68,7 @@
   padding: 4px 8px;
   position: absolute;
   top: 222px;
-  left: -2px;
+  left: -0.5px;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -84,7 +85,7 @@
 
 .admin-edit-button,
 .admin-delete-button {
-  padding: 5px 10px;
+  padding: 9px 25px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
