@@ -76,5 +76,24 @@ class AdminEventController extends Controller
 
         return response()->json(['status' => 'success', 'data' => $event], 201);
     }
-    public function delete_event(Request $request){}
+    public function delete_event(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'event_id' => 'required|exists:events,id',
+        ]);
+
+        // If validation fails, return an error response
+        if ($validator->fails()) {
+            return response()->json(['status' => 'error', 'errors' => $validator->errors()], 422);
+        }
+        $event = Event::find($request->event_id);
+        try {
+            $event->delete();
+
+            return response()->json(['status' => 'success', 'message' => 'Event deleted successfully.']);
+        } catch (\Exception $e) {
+            // Handle any exceptions that occur during the deletion
+            return response()->json(['status' => 'error', 'message' => 'Failed to delete the event.'], 500);
+        }
+    }
 }
